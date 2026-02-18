@@ -29,11 +29,11 @@ export const CAROUSEL_IMAGES: { src: string; alt: string }[] = [
   { src: 'https://i.postimg.cc/9fsyhK2p/Disen-o-sin-ti-tulo-(3).png', alt: 'Resultado AVM — Estética Facial' },
 ];
 
-/** Las 3 imágenes del carrusel después de Servicios. */
-export const CAROUSEL_GALLERY_IMAGES: { src: string; alt: string }[] = [
-  { src: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=85', alt: 'AVM — Consultorio y experiencia' },
-  { src: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=85', alt: 'AVM — Estética dental de autor' },
-  { src: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=85', alt: 'AVM — Sonrisa y armonía' },
+/** Las 3 imágenes del carrusel después de Servicios. El formato del contenedor se adapta a cada imagen (aspectRatio). */
+export const CAROUSEL_GALLERY_IMAGES: { src: string; alt: string; aspectRatio: string }[] = [
+  { src: 'https://i.postimg.cc/ZKy8fTz2/1.png', alt: 'AVM — Resultados y experiencia', aspectRatio: '4/5' },
+  { src: 'https://i.postimg.cc/Z0kdkdhq/2.png', alt: 'AVM — Estética de autor', aspectRatio: '9/16' },
+  { src: 'https://i.postimg.cc/XNtHN1jn/3.png', alt: 'AVM — Sonrisa y armonía', aspectRatio: '4/5' },
 ];
 
 /** Tasa aproximada COP → USD para referencia (4.200 COP ≈ 1 USD). */

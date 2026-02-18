@@ -20,7 +20,11 @@ const GalleryCarousel: React.FC = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <h2 id="gallery-carousel-heading" className="sr-only">Galería AVM</h2>
         <div className="relative rounded-lg overflow-hidden border border-[#0A1128]/10 shadow-xl bg-[#0A1128]/5">
-          <div className="relative aspect-[16/9] flex items-center justify-center">
+          {/* El contenedor adapta su proporción a la imagen activa (4:5, 9:16, etc.), no al revés */}
+          <div
+            className="relative w-full flex items-center justify-center transition-[aspect-ratio] duration-300 ease-out"
+            style={{ aspectRatio: CAROUSEL_GALLERY_IMAGES[index].aspectRatio }}
+          >
             {CAROUSEL_GALLERY_IMAGES.map((img, i) => (
               <div
                 key={img.src}
