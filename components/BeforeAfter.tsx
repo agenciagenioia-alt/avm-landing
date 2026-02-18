@@ -1,19 +1,9 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React from 'react';
 import { CAROUSEL_IMAGES } from '../constants';
 
-/** Resultados Reales: carrusel con las 3 imágenes. Táctil y con flechas. */
+/** Resultados Reales: una sola imagen fija antes/después. */
 const BeforeAfter: React.FC = () => {
-  const [index, setIndex] = useState(0);
-  const total = CAROUSEL_IMAGES.length;
-
-  const go = useCallback((next: number) => {
-    setIndex((i) => ((i + next) % total + total) % total);
-  }, [total]);
-
-  useEffect(() => {
-    const id = setInterval(() => go(1), 5000);
-    return () => clearInterval(id);
-  }, [go]);
+  const img = CAROUSEL_IMAGES[0];
 
   return (
     <section className="py-20 sm:py-28 bg-white" aria-labelledby="before-after-heading">
@@ -29,53 +19,13 @@ const BeforeAfter: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           <div className="relative rounded-lg overflow-hidden border border-[#0A1128]/10 shadow-xl bg-[#0A1128]/5">
             <div className="relative aspect-[4/3] flex items-center justify-center">
-              {CAROUSEL_IMAGES.map((img, i) => (
-                <div
-                  key={img.src}
-                  className="absolute inset-0 flex items-center justify-center transition-opacity duration-500 ease-out"
-                  style={{ opacity: i === index ? 1 : 0, pointerEvents: i === index ? 'auto' : 'none' }}
-                  aria-hidden={i !== index}
-                >
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    loading={i === 0 ? 'eager' : 'lazy'}
-                    decoding="async"
-                    className="max-w-full max-h-full w-auto h-full object-contain object-center"
-                  />
-                </div>
-              ))}
-            </div>
-
-            <button
-              type="button"
-              onClick={() => go(-1)}
-              className="absolute left-3 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#0A1128]/80 text-[#D4AF37] flex items-center justify-center hover:bg-[#0A1128] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 transition-colors"
-              aria-label="Imagen anterior"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-            </button>
-            <button
-              type="button"
-              onClick={() => go(1)}
-              className="absolute right-3 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#0A1128]/80 text-[#D4AF37] flex items-center justify-center hover:bg-[#0A1128] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 transition-colors"
-              aria-label="Siguiente imagen"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-            </button>
-
-            <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2" role="tablist" aria-label="Diapositivas del carrusel">
-              {CAROUSEL_IMAGES.map((_, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  role="tab"
-                  aria-selected={i === index}
-                  aria-label={`Ir a imagen ${i + 1}`}
-                  onClick={() => setIndex(i)}
-                  className={`w-2.5 h-2.5 rounded-full transition-colors ${i === index ? 'bg-[#D4AF37] scale-110' : 'bg-white/60 hover:bg-white/80'}`}
-                />
-              ))}
+              <img
+                src={img.src}
+                alt={img.alt}
+                loading="eager"
+                decoding="async"
+                className="max-w-full max-h-full w-auto h-full object-contain object-center"
+              />
             </div>
           </div>
         </div>

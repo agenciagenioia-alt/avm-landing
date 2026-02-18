@@ -24,7 +24,7 @@ const Services: React.FC = () => {
               key={service.id}
               className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-[#0A1128]/5 flex flex-col"
             >
-              <div className="relative overflow-hidden bg-[#0A1128]/5 aspect-[4/3] flex items-center justify-center">
+              <div className="relative overflow-hidden aspect-[4/3] flex items-center justify-center bg-gradient-to-br from-[#0A1128]/30 via-[#0A1128]/20 to-[#D4AF37]/25">
                 <img
                   src={service.image}
                   alt=""

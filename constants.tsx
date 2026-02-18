@@ -22,11 +22,9 @@ export const REVIEWS = [
   { city: "Houston, TX", text: "Medical tourism done right. Five days and I left with a new smile and new confidence." },
 ];
 
-/** Las 3 imágenes del carrusel de Resultados Reales. */
+/** Imagen fija de Resultados Reales (antes/después). */
 export const CAROUSEL_IMAGES: { src: string; alt: string }[] = [
   { src: 'https://i.postimg.cc/hjwmrxJR/Disen-o-sin-ti-tulo-(1).png', alt: 'Resultado AVM — Armonización Orofacial' },
-  { src: 'https://i.postimg.cc/7hwyhc66/Diseno-sin-titulo-(2).png', alt: 'Resultado AVM — Arquitectura Dental' },
-  { src: 'https://i.postimg.cc/9fsyhK2p/Disen-o-sin-ti-tulo-(3).png', alt: 'Resultado AVM — Estética Facial' },
 ];
 
 /** Las 3 imágenes del carrusel después de Servicios. El formato del contenedor se adapta a cada imagen (aspectRatio). */
@@ -121,7 +119,7 @@ export const SERVICES: ServiceCard[] = [
     description: 'Cada diamante se coloca de forma personalizada. Detalle único y exclusivo para tu sonrisa.',
     features: ['Personalizado', 'Exclusivo', 'Consulta sin compromiso'],
     ctaText: 'Consultar Diamantes',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=85',
+    image: 'https://i.postimg.cc/L58yqGqg/Disen-o-sin-ti-tulo-(8).png',
     whatsappMessage: 'Hola AVM, me interesan los diamantes en los dientes. Quisiera información personalizada.',
   },
 ];
