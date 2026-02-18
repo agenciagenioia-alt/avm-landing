@@ -1,0 +1,87 @@
+/* AVM — Lujo clínico. Variables y utilidades globales. */
+:root {
+  --navy: #0A1128;
+  --gold: #C9A962;
+  --gold-light: #D4AF37;
+  --marble: #FDFDFD;
+  --marble-soft: #F8F9FA;
+  --transition: 0.25s ease;
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #C9A962 50%, #B8962E 100%);
+  color: var(--navy);
+}
+
+.font-luxury {
+  font-family: 'Playfair Display', serif;
+}
+
+.bg-navy {
+  background-color: var(--navy);
+}
+
+.gold-text {
+  color: var(--gold-light);
+}
+
+.slider-handle-shadow {
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.25), 0 0 24px rgba(201, 169, 98, 0.4);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--marble);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--navy);
+  border-radius: 10px;
+}
+
+/* Accesibilidad: foco visible */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 2px;
+}
+
+/* Skip link / solo lectura para screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.sr-only:focus {
+  position: fixed;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  z-index: 200;
+  top: 1rem;
+  left: 1rem;
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

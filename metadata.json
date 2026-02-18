@@ -1,0 +1,7 @@
+{
+  "name": "AVM - Arquitectura Facial & Smile Design",
+  "description": "Landing page de lujo para la clínica AVM en Cali, Colombia. Especialistas en Sinergia Orofacial, medicina estética y diseño de sonrisa premium.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
