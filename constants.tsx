@@ -1,6 +1,9 @@
 
 import { ServiceCard, FAQItem } from './types';
 
+/** Instagram oficial AVM — usar en todos los enlaces a Instagram. */
+export const INSTAGRAM_URL = 'https://www.instagram.com/odontologia_avm/';
+
 export const REVIEWS = [
   { city: "Panamá City", text: "La mejor inversión de mi vida. El trato VIP y el resultado del diseño es impecable." },
   { city: "Manhattan, NY", text: "Elite service in Cali. The porcelain veneers are natural and perfect. Highly recommend." },

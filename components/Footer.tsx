@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
                 <p>WhatsApp: +57 3173764936</p>
                 <p>Email: <a href="mailto:avmsmiles@gmail.com" className="text-[#D4AF37] hover:underline">avmsmiles@gmail.com</a></p>
                 <div className="flex space-x-6 pt-4">
-                  <a href="https://instagram.com/odontologia_avm" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#D4AF37] transition-colors">
+                  <a href="https://www.instagram.com/odontologia_avm/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#D4AF37] transition-colors">
                     <span className="text-[10px] font-bold uppercase tracking-widest">Instagram</span>
                   </a>
                 </div>
