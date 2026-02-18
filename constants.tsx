@@ -24,7 +24,7 @@ export const REVIEWS = [
 
 /** Imagen fija de Resultados Reales (antes/después). */
 export const CAROUSEL_IMAGES: { src: string; alt: string }[] = [
-  { src: 'https://i.postimg.cc/hjwmrxJR/Disen-o-sin-ti-tulo-(1).png', alt: 'Resultado AVM — Armonización Orofacial' },
+  { src: 'https://i.postimg.cc/X7jxkVNN/1.png', alt: 'Resultado AVM — Armonización Orofacial' },
 ];
 
 /** Las 3 imágenes del carrusel después de Servicios. El formato del contenedor se adapta a cada imagen (aspectRatio). */

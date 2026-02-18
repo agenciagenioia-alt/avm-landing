@@ -12,7 +12,10 @@ const Services: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="text-center mb-12 sm:mb-16">
           <span className="text-[#D4AF37] text-[10px] font-bold tracking-[0.25em] uppercase mb-4 block">Menú de Transformación</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-luxury text-[#0A1128] mb-4">Precios y Servicios</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-luxury text-[#0A1128] mb-2">Precios y Servicios</h2>
+          <p className="text-lg sm:text-xl font-luxury text-[#0A1128]/90 italic mb-4">
+            Así puede quedar tu nueva sonrisa en AVM
+          </p>
           <p className="max-w-xl mx-auto text-[#0A1128]/70 text-sm font-light">
             Desde armonización orofacial hasta sueroterapia VIP. Tu deseo es nuestra arquitectura.
           </p>
@@ -24,13 +27,13 @@ const Services: React.FC = () => {
               key={service.id}
               className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-[#0A1128]/5 flex flex-col"
             >
-              <div className="relative overflow-hidden aspect-[4/3] flex items-center justify-center bg-gradient-to-br from-[#0A1128]/30 via-[#0A1128]/20 to-[#D4AF37]/25">
+              <div className="relative overflow-hidden aspect-[4/3] flex items-center justify-center bg-[#0A1128]">
                 <img
                   src={service.image}
                   alt=""
                   loading="lazy"
                   decoding="async"
-                  className="max-w-full max-h-full w-auto h-full object-contain grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.02] transition-all duration-500"
+                  className="absolute inset-0 w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.02] transition-all duration-500"
                 />
                 <div className={`absolute left-4 right-4 flex flex-wrap gap-2 ${service.id === 'full-smile' ? 'top-20' : 'top-14'}`}>
                   <span className="px-3 py-1.5 bg-[#0A1128] text-[#D4AF37] text-[10px] font-bold uppercase tracking-wider rounded-sm">
