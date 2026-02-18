@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
       {/* Imagen de portada: formato que se ajusta a la imagen sin recortar */}
       <div className="absolute inset-0 flex items-center justify-center">
         <img
-          src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1920&q=90"
+          src="https://i.postimg.cc/JzxhBC7k/1-(2).png"
           fetchPriority="high"
           decoding="async"
           className="w-full h-full object-cover object-center brightness-[0.85] contrast-105"

@@ -16,9 +16,7 @@ const Header: React.FC = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm border-b border-[#0A1128]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 sm:gap-3 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 rounded" aria-label="AVM Smile Design inicio">
-          <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-sm border border-[#D4AF37] bg-[#0A1128]">
-            <span className="text-[#D4AF37] font-luxury text-lg sm:text-xl font-bold">A</span>
-          </div>
+          <img src="https://i.postimg.cc/vTxyPpdx/2.png" alt="" className="w-9 h-9 sm:w-10 sm:h-10 object-contain" width={40} height={40} />
           <div className="flex flex-col">
             <span className="text-xs sm:text-sm font-bold tracking-widest text-[#0A1128]">AVM SMILE DESIGN</span>
             <span className="text-[9px] sm:text-[10px] text-[#0A1128] font-medium tracking-wider">Cali, Colombia</span>

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SERVICES } from '../constants';
 
 const WHATSAPP_BASE = 'https://wa.me/573173764936';
 
 const Services: React.FC = () => {
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const getWhatsAppLink = (message: string) =>
     `${WHATSAPP_BASE}?text=${encodeURIComponent(message)}`;
 
@@ -21,13 +22,36 @@ const Services: React.FC = () => {
           </p>
         </header>
 
+        {lightboxImage && (
+          <div
+            className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4"
+            onClick={() => setLightboxImage(null)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => e.key === 'Escape' && setLightboxImage(null)}
+            aria-label="Cerrar imagen"
+          >
+            <img
+              src={lightboxImage}
+              alt="Imagen ampliada del servicio"
+              className="max-w-full max-h-full object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
           {SERVICES.map((service) => (
             <article
               key={service.id}
               className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-[#0A1128]/5 flex flex-col"
             >
-              <div className="relative overflow-hidden aspect-[4/3] flex items-center justify-center bg-[#0A1128]">
+              <button
+                type="button"
+                className="relative overflow-hidden aspect-[4/3] flex items-center justify-center bg-[#0A1128] w-full cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-inset"
+                onClick={() => setLightboxImage(service.image)}
+                aria-label={`Ver imagen completa de ${service.title}`}
+              >
                 <img
                   src={service.image}
                   alt=""
@@ -45,7 +69,7 @@ const Services: React.FC = () => {
                     </span>
                   )}
                 </div>
-              </div>
+              </button>
               <div className="p-6 sm:p-8 flex flex-col flex-grow">
                 <h3 className="text-xl sm:text-2xl font-luxury text-[#0A1128] mb-3 group-hover:text-[#D4AF37] transition-colors">
                   {service.title}
